@@ -1,0 +1,100 @@
+
+.Header-container{     
+  padding-top: 0px;
+  height: 150px;
+  width: 100%;
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  background-color: #ffffff;
+  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.2);
+  position: fixed;
+  font-size: 18px;
+  font-family: 'Roboto', sans-serif;
+  
+  z-index: 100;
+}
+.Header-container li{
+   display:inline;
+   padding-left: 15px;
+}
+.Header-container li a {
+  display: inline-block;
+  position: relative;
+  text-decoration: none;
+  color: #333;
+  cursor: pointer;
+  border: none;
+  padding: 10px 20px;
+  overflow: hidden;
+}
+
+.Header-container li a::before, .Header-container li a::after {
+content: '';
+position: absolute;
+bottom: 0;
+left: -100%;
+width: 100%;
+height: 2px;
+background-color: rgb(0, 99, 199);
+transition: left 0.8s; /* Transition for the left position */
+}
+.Header-container li a::after {
+   left: 100%;
+}
+.Header-container li a:hover::before,
+.Header-container li a:hover::after {
+left: 0; /* Move the line from left to right on hover */
+}
+.Header-container li a:hover {
+color:rgb(0, 99, 199); /* Blue text color on hover */
+}
+.logo-section{
+  padding-left: 300px;
+  
+}
+.middle-section{
+  font-weight: 700;
+  min-width: fit-content;
+  display: flex;
+  justify-content: space-between;
+ 
+}
+.right-section{
+  /*display: flex;
+  justify-content: center;
+  align-items: center;*/
+  padding-right: 300px;
+}
+
+.quote-button,.service-button, .contact-button{
+  border: none;
+  color: #fff;
+  font-size: 18px;
+  font-family:'Roboto', sans-serif;
+  font-weight: 800;
+  cursor: pointer;
+  background-color: rgb(0, 99, 199); /* Blue background color */
+  color: #fff; /* White text color */
+  text-decoration: none;
+  border: none;
+  border-radius: 8px;
+  transition: background-color 0.4s, box-shadow 0.4s; /* Transition for background color and box shadow */
+  height: 70px;
+  width: 250px;
+}
+.quote-button:hover,.service-button:hover,.contact-button:hover {
+  background-color: #054a94; /* Darker blue on hover */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Shadow on hover */
+}
+.footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 200px;
+  background-color: rgb(0, 99, 199);
+  color: white;
+  text-align: center;
+}
